@@ -2,6 +2,10 @@
   "name": "webrew",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "browser-sync": "browser-sync",
+    "start": "browser-sync start --single --server ./ --watch --files ./**/*.* --ignore node_modules --logLevel debug"
+},
   "dependencies": {
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.1"
