@@ -1,6 +1,7 @@
 {
   "name": "webrew",
   "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.1"
