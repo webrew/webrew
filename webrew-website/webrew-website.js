@@ -71,6 +71,7 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-shrink: 0;
                     overflow: hidden;
                     height: 100%;
+                    /*max-width: 114vh;*/
                 }
                 [app-header-title] {
                     z-index: 1;
@@ -129,7 +130,7 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-shrink: 0;
                     z-index: 1;
                     width: 30rem;
-                    transform: skewX(15deg);
+                    transform: skewX(15deg)  translateX(calc(50% - 20vh));
                     line-height: 2;
                 }
 
