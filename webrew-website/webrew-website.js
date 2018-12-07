@@ -50,10 +50,6 @@ export default class WebrewWebsite extends PolymerElement {
                     background: white;
                 }
 
-                footer {
-                    background: blue;
-                }
-
                 [app-header] {
                     background: seagreen;
                     display: flex;
@@ -95,7 +91,7 @@ export default class WebrewWebsite extends PolymerElement {
                     right: 0;
                 }
                 [app-header-img] {
-                    background: deepskyblue;
+                    background: #ededed;
                     position: relative;
                     width: 100%;
                     height: 100%;
@@ -110,6 +106,43 @@ export default class WebrewWebsite extends PolymerElement {
                     min-width: 100%;
                     min-height: 100%;
                     position: absolute;
+                    margin-top: -20rem;
+                }
+
+                [app-list] {
+                    font-family: 'open sans condensed';
+                    font-size: 2rem;
+                    background: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    position: relative;
+                    flex-shrink: 0;
+                    z-index: 1;
+                    width: 10vh;
+                    transform: skewX(15deg);
+                    line-height: 2;
+                }
+
+                [app-list-item] {
+                    transform: skewX(-15deg);
+                    margin-bottom: 2vh;
+                    line-height: 1;
+                }
+
+                [app-list-item][selected] span {
+                    text-decoration: underline;
+                    line-height: 1;
+                }
+                
+                [app-list-item]::before {
+                    content: '•';
+                    margin-right: 20%;
+                    font-size: 6rem;
+                    line-height: 1;
+                    vertical-align: middle;
+                    text-decoration: initial;
                 }
                 
             </style>
@@ -122,8 +155,15 @@ export default class WebrewWebsite extends PolymerElement {
                         <div app-header-title>A complete web solution</div>
                         <div app-header-left-edge></div>
                     </div>
+                    <div app-list>
+                        <div app-list-item><span>Idea</span></div>
+                        <div app-list-item><span>Design</span></div>
+                        <div app-list-item selected><span>Development</span></div>
+                        <div app-list-item><span>Deployment</span></div>
+                        <div app-list-item><span>Maintanance</span></div>
+                    </div>
                 </main>
-            <footer>footer</footer>
+            <footer></footer>
             </article>
             <noscript>Your browser does not support JavaScript!</noscript>
             `
