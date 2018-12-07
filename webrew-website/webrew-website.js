@@ -140,6 +140,11 @@ export default class WebrewWebsite extends PolymerElement {
                     vertical-align: middle;
                     text-decoration: initial;
                 }
+
+                [app-nav] {
+                    display: flex;
+                    flex-direction: column;
+                }
                 
             </style>
             <header>
@@ -157,6 +162,10 @@ export default class WebrewWebsite extends PolymerElement {
                         </text>
                     </g>
                 </svg>
+                <nav app-nav>
+                    <a href="" app-nav-link>About</a>
+                    <a href="" app-nav-link>Works</a>
+                </nav>
             </header>
             <article>
                 <main>
