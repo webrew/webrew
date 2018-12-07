@@ -9,7 +9,7 @@ import { PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-e
 // ------------------------------------------------------------------------------------------------------------------------------------------
 export default class WebrewWebsite extends PolymerElement {
 
-
+    
     // ------------------------------------------------------------------------------------------------------------------------------------------
     // Template
     // ------------------------------------------------------------------------------------------------------------------------------------------
@@ -30,10 +30,19 @@ export default class WebrewWebsite extends PolymerElement {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    align-items: center;
-                    margin: 6rem 0;
-                    
+                    align-items: center;                    
                 } 
+
+                header svg, header nav {
+                    margin: 6rem 0;
+                }
+
+                header[scrolled]{
+                    box-shadow: 0 0 8px -3px black;
+                    z-index: 10;
+                    box-shadow: 0px 0px 5px -2px black;
+                }
+
                 article {
                     display: flex;
                     flex-direction: row;
@@ -180,7 +189,7 @@ export default class WebrewWebsite extends PolymerElement {
                 }
                 
             </style>
-            <header>
+            <header scrolled$="[[state.scrolled]]">
                 <svg width="59px" height="96px" viewBox="0 0 59 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Artboard</title>
                     <desc>Created with Sketch.</desc>
@@ -200,7 +209,7 @@ export default class WebrewWebsite extends PolymerElement {
                     <a href="" app-nav-link>About</a>
                 </nav>
             </header>
-            <article>
+            <article on-scroll="scrollHandler">
                 <main>
                     <div app-header>
                         <div app-header-right-edge></div>
@@ -262,6 +271,15 @@ export default class WebrewWebsite extends PolymerElement {
         console.log("%c[STATE Current]", 'color: #16a085', this.state)
         console.log("%c[STATE Update]", 'color: #16a085', update)
         console.groupEnd()
+    }
+
+    scrollHandler(event){
+if(event.target.scrollLeft !== 0){
+    this.set("state.scrolled", true)
+} else {
+    this.set("state.scrolled", false)
+}
+        
     }
 }
 
