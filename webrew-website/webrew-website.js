@@ -31,7 +31,6 @@ export default class WebrewWebsite extends PolymerElement {
                     justify-content: space-around;
                     align-items: center;
                     
-                    background: white;
                 } 
                 article {
                     display: flex;
@@ -42,7 +41,6 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-grow: 1;
                     
 
-                    background: tomato;
                 }
                 
                 main {
@@ -50,8 +48,6 @@ export default class WebrewWebsite extends PolymerElement {
                     display: flex;
                     flex-direction: row;
 
-
-                    background: white;
                 }
 
                 [app-header] {
@@ -72,7 +68,7 @@ export default class WebrewWebsite extends PolymerElement {
                     margin: 27rem;
                 }
                 [app-header-left-edge] {
-                    background: white;
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAgMAAAAqbBEUAAAADFBMVEUAAAD8+vz8/vz09vSbQWpEAAAAAXRSTlMAQObYZgAAAZhJREFUKJEVkU2qFDAMx3PJBBJ57lJp4S3fwoMkkg7PXTK0oDuF8R6zmAOMoKewbrJoSv4fP7COnrHCFwpo98FX6TiWg2rrLCGqhiBS5ptS7WwuHk4jMvGJ8Ag2KWa2NcDagy/SAx0nUPbVWuCmaVBuEdNoJirwdTXPZVp/BNgXPch+nuN6dLjh+J1CyXDObNKNP7QhfFZXLZ7Lnw3a0TYX6hQIrzFsFYoJIxiH5HaMGR3khVh27FeVBEayW7VP2IjA+YnWmzWuY0cZ+8RoSgIPJfSayjkUjDhrWJUNgxn7PtAb4VI4uVp4GvU8SXuwUrncWMAumDZ0pO+CaPTW7NvQxgHScN4xXdEN2ibKmPP/hGlY4oUHgkL1doLXuo2FMEcr6mxhyLBnD5+ZB8uA5fjmk72cCfDKp9CYXUtOb7Ro9bvy+aYf5au9eD/lLfB78vejc9wwuJZtZaGRd+CDFimr0t7BKrPLLw07JRKZsiliaALyYYCMOP0Kf827jaJa/gHQ17jLu2rSFyCLxUzSeB9vct4OK+0y/gEPbB1xwLHKuQAAAABJRU5ErkJggg==);
                     position: absolute;
                     height: 100%;
                     width: 27vh;
@@ -83,7 +79,7 @@ export default class WebrewWebsite extends PolymerElement {
                     left: 0;
                 }
                 [app-header-right-edge] {
-                    background: white;
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAgMAAAAqbBEUAAAADFBMVEUAAAD8+vz8/vz09vSbQWpEAAAAAXRSTlMAQObYZgAAAZhJREFUKJEVkU2qFDAMx3PJBBJ57lJp4S3fwoMkkg7PXTK0oDuF8R6zmAOMoKewbrJoSv4fP7COnrHCFwpo98FX6TiWg2rrLCGqhiBS5ptS7WwuHk4jMvGJ8Ag2KWa2NcDagy/SAx0nUPbVWuCmaVBuEdNoJirwdTXPZVp/BNgXPch+nuN6dLjh+J1CyXDObNKNP7QhfFZXLZ7Lnw3a0TYX6hQIrzFsFYoJIxiH5HaMGR3khVh27FeVBEayW7VP2IjA+YnWmzWuY0cZ+8RoSgIPJfSayjkUjDhrWJUNgxn7PtAb4VI4uVp4GvU8SXuwUrncWMAumDZ0pO+CaPTW7NvQxgHScN4xXdEN2ibKmPP/hGlY4oUHgkL1doLXuo2FMEcr6mxhyLBnD5+ZB8uA5fjmk72cCfDKp9CYXUtOb7Ro9bvy+aYf5au9eD/lLfB78vejc9wwuJZtZaGRd+CDFimr0t7BKrPLLw07JRKZsiliaALyYYCMOP0Kf827jaJa/gHQ17jLu2rSFyCLxUzSeB9vct4OK+0y/gEPbB1xwLHKuQAAAABJRU5ErkJggg==);
                     position: absolute;
                     height: 100%;
                     width: 27vh;
@@ -106,16 +102,13 @@ export default class WebrewWebsite extends PolymerElement {
                     position: absolute;
                 }
                 [app-header-img] img {
-                    min-width: 100%;
-                    min-height: 100%;
+                    height: 100%;
                     position: absolute;
-                    margin-top: -25rem;
                 }
 
                 [app-list] {
                     font-family: 'open sans condensed';
                     font-size: 2rem;
-                    background: white;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -154,7 +147,7 @@ export default class WebrewWebsite extends PolymerElement {
                     <title>Artboard</title>
                     <desc>Created with Sketch.</desc>
                     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <rect fill="#FFFFFF" x="0" y="0" width="59" height="96"></rect>
+                        <rect  x="0" y="0" width="59" height="96"></rect>
                         <text id="webrew" font-family="OpenSans-CondensedBold, Open Sans Condensed" font-size="9" font-style="condensed" font-weight="bold" fill="#000000">
                             <tspan x="13" y="91">webrew</tspan>
                         </text>
