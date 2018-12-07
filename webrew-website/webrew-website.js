@@ -31,7 +31,7 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
-                    margin: 10rem 0;
+                    margin: 6rem 0;
                     
                 } 
                 article {
@@ -158,7 +158,7 @@ export default class WebrewWebsite extends PolymerElement {
                     width: 60rem;
                     overflow: auto;
                     padding: 6rem;
-                    height: 70vh;
+                    flex-shrink: 0;
                 }
 
                 h1 {
@@ -167,6 +167,7 @@ export default class WebrewWebsite extends PolymerElement {
                 }
                 h4 {
                     font-family: 'open sans condensed';
+                    margin-bottom: 1rem;;
                 }
                 
             </style>
@@ -209,10 +210,10 @@ export default class WebrewWebsite extends PolymerElement {
                         <h1>DEVELOPMENT</h1>
                         <h4>Patterns</h4>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit blanditiis voluptate doloremque numquam perspiciatis quisquam fugiat accusamus quas incidunt. Enim, perspiciatis ipsa. Nostrum, doloremque qui. Eius praesentium fuga non cumque.</p>
+                        <h4>Considerations</h4>
                         <p>Corrupti odit, voluptas ipsa odio culpa aspernatur? Ratione error, ipsa voluptas iure repellat optio sunt deleniti quidem ea aspernatur repudiandae eos autem mollitia repellendus explicabo fuga, a, animi similique reprehenderit!</p>
+                        <h4>Concepts</h4>
                         <p>Porro ut animi rem sapiente eos, corporis totam aut delectus, quasi, hic earum architecto. Beatae doloribus dicta aliquid dolores adipisci excepturi commodi inventore incidunt. Consectetur ab dignissimos tempora culpa quos.</p>
-                        <p>Accusantium, harum blanditiis officiis ab eligendi, vel dolores pariatur velit dignissimos ipsam aliquid iure ut nesciunt vitae voluptatibus aut ratione at expedita fugit doloremque voluptas. Inventore numquam enim aut doloribus?</p>
-                        <p>Molestiae cumque veritatis quas, ex ea officiis culpa laudantium labore doloribus magnam libero, reiciendis ipsum? Molestias quibusdam quasi accusamus magni aliquam facilis id, unde modi ipsum. Iusto numquam deserunt commodi.</p>
                     </div>
                 </main>
             <footer></footer>
