@@ -26,6 +26,10 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-shrink: 0;
                     flex-basis: 20rem;
                     
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
                     
                     background: white;
                 } 
@@ -126,8 +130,8 @@ export default class WebrewWebsite extends PolymerElement {
 
                 [app-list-item] {
                     transform: skewX(-15deg);
-                    margin-bottom: 2vh;
                     line-height: 1;
+                    margin-left: -8rem;
                 }
 
                 [app-list-item][selected] span {
