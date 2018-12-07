@@ -150,6 +150,15 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-direction: column;
                 }
 
+                [app-nav] a {
+                    text-decoration: none;
+                    font-family: 'open sans condensed';
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
+                    color: inherit;
+                    text-transform: uppercase;
+                }
+
                 [app-context] {
                     font-size: 2rem;
                     font-family: open sans;
@@ -187,8 +196,8 @@ export default class WebrewWebsite extends PolymerElement {
                     </g>
                 </svg>
                 <nav app-nav>
-                    <a href="" app-nav-link>About</a>
                     <a href="" app-nav-link>Works</a>
+                    <a href="" app-nav-link>About</a>
                 </nav>
             </header>
             <article>
