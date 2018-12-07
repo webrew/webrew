@@ -9,7 +9,7 @@ import { PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-e
 // ------------------------------------------------------------------------------------------------------------------------------------------
 export default class WebrewWebsite extends PolymerElement {
 
-    
+
     // ------------------------------------------------------------------------------------------------------------------------------------------
     // Template
     // ------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,9 +38,8 @@ export default class WebrewWebsite extends PolymerElement {
                 }
 
                 header[scrolled]{
-                    box-shadow: 0 0 8px -3px black;
-                    z-index: 10;
-                    box-shadow: 0px 0px 5px -2px black;
+                    /* z-index: 10;
+                    box-shadow: 0px 0px 5px -2px black;*/
                 }
 
                 article {
@@ -182,10 +181,11 @@ export default class WebrewWebsite extends PolymerElement {
                 h1 {
                     font-family: 'open sans condensed';
                     font-size: 7.2rem;
+                    margin: 0;
                 }
                 h4 {
                     font-family: 'open sans condensed';
-                    margin-bottom: 1rem;;
+                    margin: 0;
                 }
                 
             </style>
@@ -209,7 +209,7 @@ export default class WebrewWebsite extends PolymerElement {
                     <a href="" app-nav-link>About</a>
                 </nav>
             </header>
-            <article on-scroll="scrollHandler">
+            <article on-scroll="scrollHandler" on-wheel="wheel">
                 <main>
                     <div app-header>
                         <div app-header-right-edge></div>
@@ -273,13 +273,19 @@ export default class WebrewWebsite extends PolymerElement {
         console.groupEnd()
     }
 
-    scrollHandler(event){
-if(event.target.scrollLeft !== 0){
-    this.set("state.scrolled", true)
-} else {
-    this.set("state.scrolled", false)
-}
-        
+    scrollHandler(event) {
+        if (event.target.scrollLeft !== 0) {
+            this.set("state.scrolled", true)
+        } else {
+            this.set("state.scrolled", false)
+        }
+    }
+
+    wheel(event) {
+        event.preventDefault()
+        // this.shadowRoot.querySelector('article').scrollLeft += event.deltaY
+        this.shadowRoot.querySelector('article').scrollLeft += event.deltaX
+
     }
 }
 
