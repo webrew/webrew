@@ -84,20 +84,15 @@ export default class AppChapter extends PolymerElement {
             <div app-context-wrapper>
                 <dom-repeat items="{{data}}">
                     <template>
-                        <dom-if if="[[item.selected]]">
-                            <template>
-                                <div app-context selected$="[[item.selected]]">
-                                    <h1>[[item.title]]</h1>
-                                    <dom-repeat items="{{item.context}}">
-                                        <template>
-                                            <h4>[[item.title]]</h4>
-                                            <p>[[item.paragraph]]</p>
-                                        </template>
-                                    </dom-repeat> 
-                                </div>
-                            </template>
-                        </dom-if>
-                       
+                        <div app-context selected$="[[item.selected]]">
+                            <h1>[[item.title]]</h1>
+                            <dom-repeat items="{{item.context}}">
+                                <template>
+                                    <h4>[[item.title]]</h4>
+                                    <p>[[item.paragraph]]</p>
+                                </template>
+                            </dom-repeat> 
+                        </div>
                     </template>
                 </dom-repeat> 
             </div>
@@ -110,12 +105,16 @@ export default class AppChapter extends PolymerElement {
             data: {
                 type: Array,
                 value: []
+            },
+            name: {
+                type: String,
+                value: ''
             }
         }
     }
 
     click(event) {
-        this.dispatchEvent(new CustomEvent('app-chapter', { bubbles: true, composed: true, detail: { index: event.target.index } }))
+        this.dispatchEvent(new CustomEvent('app-chapter', { bubbles: true, composed: true, detail: { index: event.target.index, name: this.name } }))
     }
 }
 

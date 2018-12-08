@@ -28,6 +28,7 @@ export default class WebrewWebsite extends PolymerElement {
             })
             .then((data) => {
                 this.set('state.data.chapter.solution', jsyaml.safeLoad(data))
+                this.set('state.data.chapter.technology', jsyaml.safeLoad(data))
                 console.log(jsyaml.safeLoad(data))
             })
 
@@ -206,12 +207,13 @@ export default class WebrewWebsite extends PolymerElement {
                         <div app-header-title>A complete web solution</div>
                         <div app-header-left-edge></div>
                     </div>
-                    <app-chapter data="[[state.data.chapter.solution]]"></app-chapter>
+                    <app-chapter data="[[state.data.chapter.solution]]" name="solution"></app-chapter>
                     <div app-header>
                         <div app-header-right-edge></div>
                         <div app-header-img><img src="../assets/wallpapers/clouds.jpg" alt=""></div>
                         <div app-header-title>EDGE TECHOLOGIES</div>
                     </div>
+                    <app-chapter data="[[state.data.chapter.technology]]" name="technology"></app-chapter>
                 </main>
             <footer></footer>
             </article>
@@ -239,7 +241,8 @@ export default class WebrewWebsite extends PolymerElement {
                 value: {
                     data: {
                         chapter: {
-                            solution: []
+                            solution: [],
+                            technology: []
                         }
                     }
                 }
@@ -278,10 +281,10 @@ export default class WebrewWebsite extends PolymerElement {
     // Handlers
     // ------------------------------------------------------------------------------------------------------------------------------------------
     chapterHandler(event) {
-        this.get('state.data.chapter.solution').map((solution, index)=>{
-            this.set(`state.data.chapter.solution.${index}.selected`, false)
+        this.get(`state.data.chapter.${event.detail.name}`).map((solution, index)=>{
+            this.set(`state.data.chapter.${event.detail.name}.${index}.selected`, false)
         })
-        this.set(`state.data.chapter.solution.${event.detail.index}.selected`, true)
+        this.set(`state.data.chapter.${event.detail.name}.${event.detail.index}.selected`, true)
     }
 }
 
