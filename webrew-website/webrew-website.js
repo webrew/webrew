@@ -3,6 +3,8 @@
 // ------------------------------------------------------------------------------------------------------------------------------------------
 import { PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-element.js'
 
+import {} from './shared/icon/icon.js'
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------------
 // Declaration
@@ -71,7 +73,7 @@ export default class WebrewWebsite extends PolymerElement {
                     flex-shrink: 0;
                     overflow: hidden;
                     height: 100%;
-                    /*max-width: 114vh;*/
+                    max-width: 114vh;
                 }
                 [app-header-title] {
                     z-index: 1;
@@ -132,26 +134,22 @@ export default class WebrewWebsite extends PolymerElement {
                     width: 30rem;
                     transform: skewX(15deg)  translateX(calc(50% - 20vh));
                     line-height: 2;
+                    margin-left: 4vh;
                 }
 
                 [app-list-item] {
                     transform: skewX(-15deg);
                     line-height: 1;
                     margin-left: -8rem;
+                    display: flex;
+                    flex-direction:row;
+                    align-items: center;
+                    margin-bottom: 4rem;
                 }
 
                 [app-list-item][selected] span {
                     text-decoration: underline;
                     line-height: 1;
-                }
-                
-                [app-list-item]::before {
-                    content: '•';
-                    margin-right: 20%;
-                    font-size: 6rem;
-                    line-height: 1;
-                    vertical-align: middle;
-                    text-decoration: initial;
                 }
 
                 [app-nav] {
@@ -219,12 +217,14 @@ export default class WebrewWebsite extends PolymerElement {
                         <div app-header-left-edge></div>
                     </div>
                     <div app-list>
-                        <div app-list-item><span>Idea</span></div>
-                        <div app-list-item><span>Design</span></div>
-                        <div app-list-item selected><span>Development</span></div>
-                        <div app-list-item><span>Deployment</span></div>
-                        <div app-list-item><span>Maintanance</span></div>
+                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Idea</span></div>
+                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Design</span></div>
+                        <div app-list-item selected><app-icon name="icon-lens"></app-icon> <span>Development</span></div>
+                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Deployment</span></div>
+                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Maintanance</span></div>
                     </div>
+                    
+                    
                     <div app-context>
                         <h1>DEVELOPMENT</h1>
                         <h4>Patterns</h4>
@@ -233,6 +233,11 @@ export default class WebrewWebsite extends PolymerElement {
                         <p>Corrupti odit, voluptas ipsa odio culpa aspernatur? Ratione error, ipsa voluptas iure repellat optio sunt deleniti quidem ea aspernatur repudiandae eos autem mollitia repellendus explicabo fuga, a, animi similique reprehenderit!</p>
                         <h4>Concepts</h4>
                         <p>Porro ut animi rem sapiente eos, corporis totam aut delectus, quasi, hic earum architecto. Beatae doloribus dicta aliquid dolores adipisci excepturi commodi inventore incidunt. Consectetur ab dignissimos tempora culpa quos.</p>
+                    </div>
+                    <div app-header>
+                        <div app-header-right-edge></div>
+                        <div app-header-img><img src="../assets/wallpapers/clouds.jpg" alt=""></div>
+                        <div app-header-title>EDGE TECHOLOGIES</div>
                     </div>
                 </main>
             <footer></footer>
