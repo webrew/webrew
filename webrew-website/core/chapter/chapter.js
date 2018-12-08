@@ -37,11 +37,15 @@ export default class AppChapter extends PolymerElement {
                     flex-direction:row;
                     align-items: center;
                     margin-bottom: 4rem;
+                    cursor: pointer;
                 }
 
                 [app-list-item] span {
-                    cursor: pointer;
                     pointer-events: none;
+                }
+
+                [app-list-item]:hover span {
+                    text-decoration: underline;
                 }
 
                 [app-list-item][selected] span {
@@ -50,7 +54,8 @@ export default class AppChapter extends PolymerElement {
                 }
                 
                 [app-list-item] app-icon {
-                    
+                    pointer-events: none;
+                    margin-right: 2rem;
                 }
 
                 [app-context-wrapper] {
