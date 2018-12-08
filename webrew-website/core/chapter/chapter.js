@@ -14,7 +14,8 @@ export default class AppChapter extends PolymerElement {
                     justify-content: center;
                 }
                 [app-list] {
-                    font-family: 'open sans condensed';
+                    font-family: 'open-sans-condensed';
+                    font-weight: bold;
                     font-size: 2rem;
                     display: flex;
                     flex-direction: column;
@@ -60,7 +61,7 @@ export default class AppChapter extends PolymerElement {
 
                 [app-context-wrapper] {
                     font-size: 2rem;
-                    font-family: open sans;
+                    font-family: 'open-sans';
                     display: flex;
                     flex-direction: column;
                     width: 60rem;
