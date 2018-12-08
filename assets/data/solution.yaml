@@ -1,0 +1,46 @@
+--- 
+
+- title: Idea
+  selected: true
+  context:
+    - title: Patterns
+      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    
+    - title: Considerations
+      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vestibulum vestibulum tincidunt nisi nec pulvinar.
+
+    - title: Concepts
+      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis.
+
+- title: Design
+  context:
+    - title: Patterns
+      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    
+    - title: Considerations
+      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
+
+    - title: Concepts
+      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
+
+- title: Development
+  context:
+    - title: Patterns
+      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    
+    - title: Considerations
+      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
+
+    - title: Concepts
+      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
+
+- title: Maintanance
+  context:
+    - title: Patterns
+      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    
+    - title: Considerations
+      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
+
+    - title: Concepts
+      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 

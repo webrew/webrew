@@ -3,7 +3,13 @@
 // ------------------------------------------------------------------------------------------------------------------------------------------
 import { PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-element.js'
 
-import {} from './shared/icon/icon.js'
+import { } from '../node_modules/js-yaml/dist/js-yaml.js'
+
+import { } from './core/chapter/chapter.js'
+
+import { } from './shared/icon/icon.js'
+
+
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------
@@ -11,6 +17,26 @@ import {} from './shared/icon/icon.js'
 // ------------------------------------------------------------------------------------------------------------------------------------------
 export default class WebrewWebsite extends PolymerElement {
 
+    constructor() {
+        super()
+        let request = new Request("../assets/data/solution.yaml")
+        fetch(request)
+            .then((response) => {
+                if (response.status === 200) {
+                    return response.text()
+                }
+            })
+            .then((data) => {
+                this.set('state.data.chapter.solution', jsyaml.safeLoad(data))
+                console.log(jsyaml.safeLoad(data))
+            })
+
+        // ------------------------------------------------------------------------------------------------------------------------------------------
+        // Event listeners
+        // ------------------------------------------------------------------------------------------------------------------------------------------
+        this.addEventListener('app-chapter', this.chapterHandler)
+
+    }
 
     // ------------------------------------------------------------------------------------------------------------------------------------------
     // Template
@@ -121,36 +147,7 @@ export default class WebrewWebsite extends PolymerElement {
                     position: absolute;
                 }
 
-                [app-list] {
-                    font-family: 'open sans condensed';
-                    font-size: 2rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: flex-start;
-                    position: relative;
-                    flex-shrink: 0;
-                    z-index: 1;
-                    width: 30rem;
-                    transform: skewX(15deg)  translateX(calc(50% - 20vh));
-                    line-height: 2;
-                    margin-left: 4vh;
-                }
-
-                [app-list-item] {
-                    transform: skewX(-15deg);
-                    line-height: 1;
-                    margin-left: -8rem;
-                    display: flex;
-                    flex-direction:row;
-                    align-items: center;
-                    margin-bottom: 4rem;
-                }
-
-                [app-list-item][selected] span {
-                    text-decoration: underline;
-                    line-height: 1;
-                }
+                
 
                 [app-nav] {
                     display: flex;
@@ -166,16 +163,7 @@ export default class WebrewWebsite extends PolymerElement {
                     text-transform: uppercase;
                 }
 
-                [app-context] {
-                    font-size: 2rem;
-                    font-family: open sans;
-                    display: flex;
-                    flex-direction: column;
-                    width: 60rem;
-                    overflow: auto;
-                    padding: 6rem;
-                    flex-shrink: 0;
-                }
+                
 
                 h1 {
                     font-family: 'open sans condensed';
@@ -216,24 +204,7 @@ export default class WebrewWebsite extends PolymerElement {
                         <div app-header-title>A complete web solution</div>
                         <div app-header-left-edge></div>
                     </div>
-                    <div app-list>
-                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Idea</span></div>
-                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Design</span></div>
-                        <div app-list-item selected><app-icon name="icon-lens"></app-icon> <span>Development</span></div>
-                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Deployment</span></div>
-                        <div app-list-item><app-icon name="icon-lens"></app-icon> <span>Maintanance</span></div>
-                    </div>
-                    
-                    
-                    <div app-context>
-                        <h1>DEVELOPMENT</h1>
-                        <h4>Patterns</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit blanditiis voluptate doloremque numquam perspiciatis quisquam fugiat accusamus quas incidunt. Enim, perspiciatis ipsa. Nostrum, doloremque qui. Eius praesentium fuga non cumque.</p>
-                        <h4>Considerations</h4>
-                        <p>Corrupti odit, voluptas ipsa odio culpa aspernatur? Ratione error, ipsa voluptas iure repellat optio sunt deleniti quidem ea aspernatur repudiandae eos autem mollitia repellendus explicabo fuga, a, animi similique reprehenderit!</p>
-                        <h4>Concepts</h4>
-                        <p>Porro ut animi rem sapiente eos, corporis totam aut delectus, quasi, hic earum architecto. Beatae doloribus dicta aliquid dolores adipisci excepturi commodi inventore incidunt. Consectetur ab dignissimos tempora culpa quos.</p>
-                    </div>
+                    <app-chapter data="[[state.data.chapter.solution]]"></app-chapter>
                     <div app-header>
                         <div app-header-right-edge></div>
                         <div app-header-img><img src="../assets/wallpapers/clouds.jpg" alt=""></div>
@@ -263,7 +234,13 @@ export default class WebrewWebsite extends PolymerElement {
         return {
             state: {
                 type: Object,
-                value: {}
+                value: {
+                    data: {
+                        chapter: {
+                            solution: []
+                        }
+                    }
+                }
             }
         }
     }
@@ -292,6 +269,17 @@ export default class WebrewWebsite extends PolymerElement {
         // this.shadowRoot.querySelector('article').scrollLeft += event.deltaY
         this.shadowRoot.querySelector('article').scrollLeft += event.deltaX
 
+    }
+
+
+    // ------------------------------------------------------------------------------------------------------------------------------------------
+    // Handlers
+    // ------------------------------------------------------------------------------------------------------------------------------------------
+    chapterHandler(event) {
+        this.get('state.data.chapter.solution').map((solution, index)=>{
+            this.set(`state.data.chapter.solution.${index}.selected`, false)
+        })
+        this.set(`state.data.chapter.solution.${event.detail.index}.selected`, true)
     }
 }
 
