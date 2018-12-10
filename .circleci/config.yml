@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: 'echo { "projects": { "default": "webrew-ab" } } > .firebaserc'
         
+      - run: 'echo { "hosting": { "public": ".", "ignore": [ "firebase.json", "**/.*" ], "rewrites": [ { "source": "**", "destination": "/index.html" } ] } } > .firebase.json'
       - run: npm install --production
       - run: npm install firebase-tools
       - run: npm run firebase deploy -- --project "webrew-ab" --token "$FIREBASE_TOKEN" --only "hosting" --debug
