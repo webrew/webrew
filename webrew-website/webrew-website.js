@@ -56,11 +56,18 @@ export default class WebrewWebsite extends PolymerElement {
                 header {
                     flex-shrink: 0;
                     flex-basis: 20rem;
-                    
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 20rem;
+                    height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    align-items: center;                    
+                    align-items: center;  
+                    z-index: 100;   
+                    opacity: .97;
+                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAgMAAAAqbBEUAAAADFBMVEUAAAD8+vz8/vz09vSbQWpEAAAAAXRSTlMAQObYZgAAAZhJREFUKJEVkU2qFDAMx3PJBBJ57lJp4S3fwoMkkg7PXTK0oDuF8R6zmAOMoKewbrJoSv4fP7COnrHCFwpo98FX6TiWg2rrLCGqhiBS5ptS7WwuHk4jMvGJ8Ag2KWa2NcDagy/SAx0nUPbVWuCmaVBuEdNoJirwdTXPZVp/BNgXPch+nuN6dLjh+J1CyXDObNKNP7QhfFZXLZ7Lnw3a0TYX6hQIrzFsFYoJIxiH5HaMGR3khVh27FeVBEayW7VP2IjA+YnWmzWuY0cZ+8RoSgIPJfSayjkUjDhrWJUNgxn7PtAb4VI4uVp4GvU8SXuwUrncWMAumDZ0pO+CaPTW7NvQxgHScN4xXdEN2ibKmPP/hGlY4oUHgkL1doLXuo2FMEcr6mxhyLBnD5+ZB8uA5fjmk72cCfDKp9CYXUtOb7Ro9bvy+aYf5au9eD/lLfB78vejc9wwuJZtZaGRd+CDFimr0t7BKrPLLw07JRKZsiliaALyYYCMOP0Kf827jaJa/gHQ17jLu2rSFyCLxUzSeB9vct4OK+0y/gEPbB1xwLHKuQAAAABJRU5ErkJggg==);
                 } 
 
                 header svg, header nav {
@@ -78,7 +85,7 @@ export default class WebrewWebsite extends PolymerElement {
                     height: 100%;
                     
                     flex-grow: 1;
-                    
+                    margin-left: 20rem;
 
                 }
                 
@@ -179,7 +186,7 @@ export default class WebrewWebsite extends PolymerElement {
                 }
                 
             </style>
-            <header scrolled$="[[state.scrolled]]">
+            <header scrolled$="[[state.scrolled]]" scroll$="[[state.scroll]]">
                 <svg width="59px" height="96px" viewBox="0 0 59 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Artboard</title>
                     <desc>Created with Sketch.</desc>
@@ -262,6 +269,22 @@ export default class WebrewWebsite extends PolymerElement {
     }
 
     scrollHandler(event) {
+        this.set("state.scroll", window.scrollX)
+
+        let width = 20
+        width -= window.scrollX/10
+
+        this.shadowRoot.querySelector('header').style.width = width + 'rem'
+
+        if(width <= 10) {
+            this.shadowRoot.querySelector('header').style.width = '10rem'
+        }
+        
+        if(width >= 20) {
+            this.shadowRoot.querySelector('header').style.width = '20rem'
+        }
+        
+
         if (window.scrollX !== 0) {
             this.set("state.scrolled", true)
         } else {
@@ -272,7 +295,7 @@ export default class WebrewWebsite extends PolymerElement {
     wheel(event) {
         event.preventDefault()
         // this.shadowRoot.querySelector('article').scrollLeft += event.deltaY
-        this.shadowRoot.querySelector('article').scrollLeft += event.deltaX
+        // this.shadowRoot.querySelector('article').scrollLeft += event.deltaX
 
     }
 
