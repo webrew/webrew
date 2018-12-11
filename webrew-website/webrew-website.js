@@ -35,6 +35,7 @@ export default class WebrewWebsite extends PolymerElement {
         // ------------------------------------------------------------------------------------------------------------------------------------------
         // Event listeners
         // ------------------------------------------------------------------------------------------------------------------------------------------
+        window.onscroll = this.scrollHandler.bind(this)
         this.addEventListener('app-chapter', this.chapterHandler)
 
     }
@@ -75,8 +76,7 @@ export default class WebrewWebsite extends PolymerElement {
                     display: flex;
                     flex-direction: row;
                     height: 100%;
-                    overflow-x: auto;
-                    -webkit-overflow-scrolling: touch;
+                    
                     flex-grow: 1;
                     
 
@@ -199,7 +199,7 @@ export default class WebrewWebsite extends PolymerElement {
                     <a href="" app-nav-link>About</a>
                 </nav>
             </header>
-            <article on-scroll="scrollHandler" on-wheel="wheel">
+            <article>
                 <main>
                     <div app-header>
                         <div app-header-right-edge></div>
@@ -262,7 +262,7 @@ export default class WebrewWebsite extends PolymerElement {
     }
 
     scrollHandler(event) {
-        if (event.target.scrollLeft !== 0) {
+        if (window.scrollX !== 0) {
             this.set("state.scrolled", true)
         } else {
             this.set("state.scrolled", false)
