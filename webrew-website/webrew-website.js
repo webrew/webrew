@@ -149,9 +149,9 @@ export default class WebrewWebsite extends PolymerElement {
             <article>
                 <main>
                     <app-jumbotron left-bottom right-top title="A complete web solution" src="../assets/wallpapers/adventure-alpine.jpg"></app-jumbotron>
-                    <app-chapter data="[[state.data.chapter.solution]]" name="solution"></app-chapter>
+                    <app-chapter left-bottom data="[[state.data.chapter.solution]]" name="solution"></app-chapter>
                     <app-jumbotron left right-bottom title="EDGE TECHOLOGIES" src="../assets/wallpapers/clouds.jpg"></app-jumbotron>
-                    <app-chapter data="[[state.data.chapter.technology]]" name="technology"></app-chapter>
+                    <app-chapter left-top  data="[[state.data.chapter.technology]]" name="technology"></app-chapter>
                     <app-jumbotron title="WEBREW" src="../assets/wallpapers/alpine.jpg"></app-jumbotron>
                 </main>
             <footer></footer>

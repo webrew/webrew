@@ -25,7 +25,7 @@ export default class AppChapter extends PolymerElement {
                     flex-shrink: 0;
                     z-index: 1;
                     width: 30rem;
-                    transform: skewX(15deg)  translateX(calc(50% - 20vh));
+                    transform: skewX(15deg) translateX(calc(50% - 20vh));
                     line-height: 2;
                     margin-left: 4vh;
                 }
@@ -75,6 +75,12 @@ export default class AppChapter extends PolymerElement {
                 [app-context]:not([selected]) {
                     display: none;
                 }
+
+                :host([left-top]) [app-list] { transform: skewX(-15deg) translateX(calc(50% - 15vh)); transform-origin: top; }
+                :host([left-top]) [app-list] [app-list-item] { transform: skewX(15deg); transform-origin: top; }
+                :host([left-bottom]) [app-list] { transform: skewX(15deg) translateX(calc(50% - 15vh)); transform-origin: bottom; }
+                :host([right-top]) [app-list] { transform: skewX(15deg) translateX(calc(50% - 15vh)); transform-origin: top; }
+                :host([right-bottom]) [app-list] { transform: skewX(-15deg) translateX(calc(50% - 15vh)); transform-origin: bottom; }
             </style>
             <div app-list>
                 <dom-repeat items="{{data}}">
@@ -111,6 +117,22 @@ export default class AppChapter extends PolymerElement {
             name: {
                 type: String,
                 value: ''
+            },
+            rightTop: {
+                value: false,
+                type: Boolean
+            },
+            rightBottom: {
+                value: false,
+                type: Boolean
+            },
+            leftTop: {
+                value: false,
+                type: Boolean
+            },
+            leftBottom: {
+                value: false,
+                type: Boolean
             }
         }
     }
