@@ -68,6 +68,8 @@ export default class AppChapter extends PolymerElement {
                     overflow: auto;
                     padding: 6rem;
                     flex-shrink: 0;
+                    overflow-y: auto;
+                    height: 70vh;
                 }
 
                 [app-context]:not([selected]) {

@@ -6,6 +6,7 @@ import { PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-e
 import { } from '../node_modules/js-yaml/dist/js-yaml.js'
 
 import { } from './core/chapter/chapter.js'
+import { } from './core/jumbotron/jumbotron.js'
 
 import { } from './shared/icon/icon.js'
 
@@ -97,67 +98,6 @@ export default class WebrewWebsite extends PolymerElement {
 
                 }
 
-                [app-header] {
-                    background: seagreen;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    flex-shrink: 0;
-                    overflow: hidden;
-                    height: 100%;
-                    max-width: 114vh;
-                }
-                [app-header-title] {
-                    z-index: 1;
-                    font-family: 'open-sans-condensed';
-                    font-weight: bold;
-                    font-size: 3.6rem;
-                    text-transform: uppercase;
-                    margin: 27rem;
-                }
-                [app-header-left-edge] {
-                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAgMAAAAqbBEUAAAADFBMVEUAAAD8+vz8/vz09vSbQWpEAAAAAXRSTlMAQObYZgAAAZhJREFUKJEVkU2qFDAMx3PJBBJ57lJp4S3fwoMkkg7PXTK0oDuF8R6zmAOMoKewbrJoSv4fP7COnrHCFwpo98FX6TiWg2rrLCGqhiBS5ptS7WwuHk4jMvGJ8Ag2KWa2NcDagy/SAx0nUPbVWuCmaVBuEdNoJirwdTXPZVp/BNgXPch+nuN6dLjh+J1CyXDObNKNP7QhfFZXLZ7Lnw3a0TYX6hQIrzFsFYoJIxiH5HaMGR3khVh27FeVBEayW7VP2IjA+YnWmzWuY0cZ+8RoSgIPJfSayjkUjDhrWJUNgxn7PtAb4VI4uVp4GvU8SXuwUrncWMAumDZ0pO+CaPTW7NvQxgHScN4xXdEN2ibKmPP/hGlY4oUHgkL1doLXuo2FMEcr6mxhyLBnD5+ZB8uA5fjmk72cCfDKp9CYXUtOb7Ro9bvy+aYf5au9eD/lLfB78vejc9wwuJZtZaGRd+CDFimr0t7BKrPLLw07JRKZsiliaALyYYCMOP0Kf827jaJa/gHQ17jLu2rSFyCLxUzSeB9vct4OK+0y/gEPbB1xwLHKuQAAAABJRU5ErkJggg==);
-                    position: absolute;
-                    height: 100%;
-                    width: 27vh;
-                    transform: skewX(15deg);
-                    z-index: 1;
-                    transform-origin: bottom;
-                    top: 0;
-                    left: 0;
-                }
-                [app-header-right-edge] {
-                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAgMAAAAqbBEUAAAADFBMVEUAAAD8+vz8/vz09vSbQWpEAAAAAXRSTlMAQObYZgAAAZhJREFUKJEVkU2qFDAMx3PJBBJ57lJp4S3fwoMkkg7PXTK0oDuF8R6zmAOMoKewbrJoSv4fP7COnrHCFwpo98FX6TiWg2rrLCGqhiBS5ptS7WwuHk4jMvGJ8Ag2KWa2NcDagy/SAx0nUPbVWuCmaVBuEdNoJirwdTXPZVp/BNgXPch+nuN6dLjh+J1CyXDObNKNP7QhfFZXLZ7Lnw3a0TYX6hQIrzFsFYoJIxiH5HaMGR3khVh27FeVBEayW7VP2IjA+YnWmzWuY0cZ+8RoSgIPJfSayjkUjDhrWJUNgxn7PtAb4VI4uVp4GvU8SXuwUrncWMAumDZ0pO+CaPTW7NvQxgHScN4xXdEN2ibKmPP/hGlY4oUHgkL1doLXuo2FMEcr6mxhyLBnD5+ZB8uA5fjmk72cCfDKp9CYXUtOb7Ro9bvy+aYf5au9eD/lLfB78vejc9wwuJZtZaGRd+CDFimr0t7BKrPLLw07JRKZsiliaALyYYCMOP0Kf827jaJa/gHQ17jLu2rSFyCLxUzSeB9vct4OK+0y/gEPbB1xwLHKuQAAAABJRU5ErkJggg==);
-                    position: absolute;
-                    height: 100%;
-                    width: 27vh;
-                    transform: skewX(15deg);
-                    z-index: 1;
-                    transform-origin: top;
-                    top: 0;
-                    right: 0;
-                }
-                [app-header-img] {
-                    background: #ededed;
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                }
-                [app-header-img] img {
-                    height: 100%;
-                    position: absolute;
-                }
-
-                
-
                 [app-nav] {
                     display: flex;
                     flex-direction: column;
@@ -208,19 +148,11 @@ export default class WebrewWebsite extends PolymerElement {
             </header>
             <article>
                 <main>
-                    <div app-header>
-                        <div app-header-right-edge></div>
-                        <div app-header-img><img src="../assets/wallpapers/adventure-alpine.jpg" alt=""></div>
-                        <div app-header-title>A complete web solution</div>
-                        <div app-header-left-edge></div>
-                    </div>
+                    <app-jumbotron left-bottom right-top title="A complete web solution" src="../assets/wallpapers/adventure-alpine.jpg"></app-jumbotron>
                     <app-chapter data="[[state.data.chapter.solution]]" name="solution"></app-chapter>
-                    <div app-header>
-                        <div app-header-right-edge></div>
-                        <div app-header-img><img src="../assets/wallpapers/clouds.jpg" alt=""></div>
-                        <div app-header-title>EDGE TECHOLOGIES</div>
-                    </div>
+                    <app-jumbotron left right-bottom title="EDGE TECHOLOGIES" src="../assets/wallpapers/clouds.jpg"></app-jumbotron>
                     <app-chapter data="[[state.data.chapter.technology]]" name="technology"></app-chapter>
+                    <app-jumbotron title="WEBREW" src="../assets/wallpapers/alpine.jpg"></app-jumbotron>
                 </main>
             <footer></footer>
             </article>
