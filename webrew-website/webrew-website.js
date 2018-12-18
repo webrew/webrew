@@ -30,7 +30,6 @@ export default class WebrewWebsite extends PolymerElement {
             .then((data) => {
                 this.set('state.data.chapter.solution', jsyaml.safeLoad(data))
                 this.set('state.data.chapter.technology', jsyaml.safeLoad(data))
-                console.log(jsyaml.safeLoad(data))
             })
 
         // ------------------------------------------------------------------------------------------------------------------------------------------
