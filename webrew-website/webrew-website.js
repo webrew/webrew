@@ -118,6 +118,7 @@ export default class WebrewWebsite extends PolymerElement {
                 h1 {
                     font-family: 'open-sans-condensed';
                     font-size: 7.2rem;
+                    text-transform: uppercase;
                     margin: 0;
                 }
                 h4 {
@@ -152,7 +153,22 @@ export default class WebrewWebsite extends PolymerElement {
                     <app-chapter left-bottom data="[[state.data.chapter.solution]]" name="solution"></app-chapter>
                     <app-jumbotron left right-bottom title="EDGE TECHOLOGIES" src="../assets/wallpapers/clouds.jpg"></app-jumbotron>
                     <app-chapter left-top  data="[[state.data.chapter.technology]]" name="technology"></app-chapter>
-                    <app-jumbotron title="WEBREW" src="../assets/wallpapers/alpine.jpg"></app-jumbotron>
+                    <app-jumbotron src="../assets/wallpapers/alpine.jpg">
+                        <svg viewBox="0 0 59 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Artboard</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect  x="0" y="0" width="59" height="96"></rect>
+                                <text id="webrew" font-family="open-sans-condensed" font-size="9" font-style="condensed" font-weight="bold" fill="currentColor">
+                                    <tspan x="13" y="91">webrew</tspan>
+                                </text>
+                                <path d="M20.937995,77.2113085 L16.4180352,80 L4,60.4735967 L14.7756362,43.0388167 L4.02825155,25.2362748 L16.3465191,5 L20.9208309,7.7013453 L10.2401406,25.2474315 L21,43.0706373 L10.2683921,60.4341804 L20.937995,77.2113085 Z M31.937995,77.2113085 L27.4180352,80 L15,60.4735967 L25.7756362,43.0388167 L15.0282516,25.2362748 L27.3465191,5 L31.9208309,7.7013453 L21.2401406,25.2474315 L32,43.0706373 L21.2683921,60.4341804 L31.937995,77.2113085 Z M41.937995,77.2113085 L37.4180352,80 L25,60.4735967 L35.7756362,43.0388167 L25.0282516,25.2362748 L37.3465191,5 L41.9208309,7.7013453 L31.2401406,25.2474315 L42,43.0706373 L31.2683921,60.4341804 L41.937995,77.2113085 Z" id="Combined-Shape" fill="currentColor" fill-rule="nonzero"></path>
+                                <text id="®" font-family="Helvetica-Bold, Helvetica" font-size="14" font-weight="bold" fill="currentColor">
+                                    <tspan x="44" y="78">®</tspan>
+                                </text>
+                            </g>
+                        </svg>
+                    </app-jumbotron>
                 </main>
             <footer></footer>
             </article>
@@ -204,18 +220,18 @@ export default class WebrewWebsite extends PolymerElement {
         this.set("state.scroll", window.scrollX)
 
         let width = 20
-        width -= window.scrollX/10
+        width -= window.scrollX / 10
 
         this.shadowRoot.querySelector('header').style.width = width + 'rem'
 
-        if(width <= 10) {
+        if (width <= 10) {
             this.shadowRoot.querySelector('header').style.width = '10rem'
         }
-        
-        if(width >= 20) {
+
+        if (width >= 20) {
             this.shadowRoot.querySelector('header').style.width = '20rem'
         }
-        
+
 
         if (window.scrollX !== 0) {
             this.set("state.scrolled", true)
@@ -236,7 +252,7 @@ export default class WebrewWebsite extends PolymerElement {
     // Handlers
     // ------------------------------------------------------------------------------------------------------------------------------------------
     chapterHandler(event) {
-        this.get(`state.data.chapter.${event.detail.name}`).map((solution, index)=>{
+        this.get(`state.data.chapter.${event.detail.name}`).map((solution, index) => {
             this.set(`state.data.chapter.${event.detail.name}.${index}.selected`, false)
         })
         this.set(`state.data.chapter.${event.detail.name}.${event.detail.index}.selected`, true)

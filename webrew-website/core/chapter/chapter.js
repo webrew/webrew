@@ -81,6 +81,13 @@ export default class AppChapter extends PolymerElement {
                 :host([left-bottom]) [app-list] { transform: skewX(15deg) translateX(calc(50% - 15vh)); transform-origin: bottom; }
                 :host([right-top]) [app-list] { transform: skewX(15deg) translateX(calc(50% - 15vh)); transform-origin: top; }
                 :host([right-bottom]) [app-list] { transform: skewX(-15deg) translateX(calc(50% - 15vh)); transform-origin: bottom; }
+
+                h1 {
+                    font-family: 'open-sans-condensed';
+                    font-size: 7.2rem;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
             </style>
             <div app-list>
                 <dom-repeat items="{{data}}">

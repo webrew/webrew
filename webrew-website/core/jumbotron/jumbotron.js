@@ -76,11 +76,21 @@ export default class AppJumbotron extends PolymerElement {
                 :host([right-top]) [right-edge] { display: block; transform: skewX(15deg); transform-origin: top;}
                 :host([right-bottom]) [right-edge] { display: block; transform: skewX(-15deg); transform-origin: bottom;}
                 
+                ::slotted(svg)  {
+                    height: 40rem;
+                    color: white;
+                    z-index: 1;
+                }
                 
             </style>
             <div left-edge></div>
             <div img><img src="[[src]]" alt=""></div>
-            <div title>[[title]]</div>
+            <dom-if if="[[title]]">
+                <template>
+                    <div title>[[title]]</div>
+                </template>
+            </dom-if>
+            <slot></slot>
             <div right-edge></div>
         `
     }
