@@ -158,7 +158,7 @@ export default class AppJumbotron extends PolymerElement {
         if (this.isInViewport(imgWrapper)) {
             let marginLeft = parseInt(img.style.marginLeft.replace('px', '')) || 0
             this.set('inViewport', true)
-            marginLeft = marginLeft - wheel/2 
+            marginLeft = marginLeft - wheel/4 
             if(-1000 <= marginLeft && marginLeft <= 2000){
                 img.style.marginLeft = marginLeft + 'px'
             }
