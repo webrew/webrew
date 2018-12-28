@@ -36,6 +36,7 @@ export default class WebrewWebsite extends PolymerElement {
         // Event listeners
         // ------------------------------------------------------------------------------------------------------------------------------------------
         window.onscroll = this.scrollHandler.bind(this)
+        window.onwheel = this.wheelHandler.bind(this)
         this.addEventListener('app-chapter', this.chapterHandler)
 
     }
@@ -148,11 +149,11 @@ export default class WebrewWebsite extends PolymerElement {
             </header>
             <article>
                 <main>
-                    <app-jumbotron left-bottom right-top title="A complete web solution" src="../assets/wallpapers/adventure-alpine.jpg"></app-jumbotron>
+                    <app-jumbotron scroll$="[[state.scroll]]" left-bottom right-top title="A complete web solution" src="../assets/wallpapers/adventure-alpine.jpg" wheel$="[[state.wheel]]"></app-jumbotron>
                     <app-chapter left-bottom data="[[state.data.chapter.solution]]" name="solution"></app-chapter>
-                    <app-jumbotron left right-bottom title="EDGE TECHOLOGIES" src="../assets/wallpapers/clouds.jpg"></app-jumbotron>
+                    <app-jumbotron scroll$="[[state.scroll]]"  left right-bottom title="EDGE TECHOLOGIES" src="../assets/wallpapers/clouds.jpg" wheel$="[[state.wheel]]"></app-jumbotron>
                     <app-chapter left-top  data="[[state.data.chapter.technology]]" name="technology"></app-chapter>
-                    <app-jumbotron src="../assets/wallpapers/alpine.jpg">
+                    <app-jumbotron scroll$="[[state.scroll]]"  src="../assets/wallpapers/alpine.jpg" wheel$="[[state.wheel]]">
                         <svg viewBox="0 0 59 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>Artboard</title>
                             <desc>Created with Sketch.</desc>
@@ -239,14 +240,11 @@ export default class WebrewWebsite extends PolymerElement {
         }
     }
 
-    wheel(event) {
-        event.preventDefault()
-        // this.shadowRoot.querySelector('article').scrollLeft += event.deltaY
-        // this.shadowRoot.querySelector('article').scrollLeft += event.deltaX
-
+    wheelHandler(event) {
+        this.set("state.wheel", event.deltaX)
     }
 
-
+    
     // ------------------------------------------------------------------------------------------------------------------------------------------
     // Handlers
     // ------------------------------------------------------------------------------------------------------------------------------------------

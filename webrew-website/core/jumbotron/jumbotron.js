@@ -118,7 +118,49 @@ export default class AppJumbotron extends PolymerElement {
             leftBottom: {
                 value: false,
                 type: Boolean
+            },
+            wheel: {
+                type: Number,
+                value: 0,
+                observer: 'wheelObserver'
+            },
+            inViewport: {
+                reflectToAttribute: true,
+                type: Boolean,
+                value: false
             }
+        }
+    }
+
+    isInViewport(el) {
+        var top = el.offsetTop
+        var left = el.offsetLeft
+        var width = el.offsetWidth
+        var height = el.offsetHeight
+
+        while (el.offsetParent) {
+            el = el.offsetParent
+            top += el.offsetTop
+            left += el.offsetLeft
+        }
+
+        return (
+            top < (window.pageYOffset + window.innerHeight) &&
+            left < (window.pageXOffset + window.innerWidth) &&
+            (top + height) > window.pageYOffset &&
+            (left + width) > window.pageXOffset
+        )
+    }
+
+    wheelObserver(wheel) {
+        let img = this.shadowRoot.querySelector('img')
+        let imgWrapper = this.shadowRoot.querySelector('[img]')
+        if (this.isInViewport(imgWrapper)) {
+            let marginLeft = parseInt(img.style.marginLeft.replace('px', '')) || 0
+            this.set('inViewport', true)
+            // img.style.marginLeft = marginLeft - wheel/2 + 'px'
+        } else {
+            this.set('inViewport', false)
         }
     }
 }
