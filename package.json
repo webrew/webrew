@@ -4,16 +4,17 @@
   "private": true,
   "scripts": {
     "browser-sync": "browser-sync",
+    "polymer": "polymer",
     "firebase": "firebase",
-    "start": "browser-sync start --single --server ./ --watch --files ./**/*.* --ignore node_modules --logLevel debug"
+    "sync": "browser-sync start --proxy localhost:8081 --watch --files ./**/*.* --ignore node_modules --logLevel debug",
+    "server": "polymer serve"
   },
   "dependencies": {
-    "@polymer/polymer": "^3.1.0",
-    "@webcomponents/webcomponentsjs": "^2.2.1",
-    "js-yaml": "^3.12.0"
+    "@polymer/lit-element": "^0.6.5"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "firebase-tools": "^6.1.2"
+    "firebase-tools": "^6.2.2",
+    "polymer-cli": "^1.9.4"
   }
 }
