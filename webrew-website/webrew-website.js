@@ -1,5 +1,7 @@
 import { LitElement, html } from '@polymer/lit-element'
 
+import { } from './shared/logo/logo.js'
+
 class WebrewWebsite extends LitElement {
   
   static get is() {
@@ -18,7 +20,9 @@ class WebrewWebsite extends LitElement {
   }
 
   render() {
-    return html`<p>Hello, ${this.name}!</p>`
+    return html`
+      <website-logo></website-logo>
+    `
   }
 }
 
