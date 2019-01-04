@@ -2,12 +2,13 @@ import { LitElement, html } from '@polymer/lit-element'
 
 class WebsiteLogo extends LitElement {
 
-    static get is() {
-        return 'website-logo'
-    }
-
     render() {
         return html`
+            <style>
+                :host {
+                    display: block;
+                }
+            </style>
             <svg width="59px" height="96px" viewBox="0 0 59 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <text id="webrew" font-family="open-sans-condensed" font-size="9" font-style="condensed" font-weight="bold" fill="#000000">
@@ -23,4 +24,4 @@ class WebsiteLogo extends LitElement {
     }
 }
 
-customElements.define(WebsiteLogo.is, WebsiteLogo)
+customElements.define('website-logo', WebsiteLogo)

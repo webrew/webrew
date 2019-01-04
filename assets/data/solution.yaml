@@ -2,59 +2,48 @@
 
 - title: The Idea
   selected: true
-  context:
-    - title: Discovering
-      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
-    
-    - title: Verification
-      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vestibulum vestibulum tincidunt nisi nec pulvinar.
-
-    - title: Planning
-      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis.
+  content: |
+    ## Discovering
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    ## Verification
+    Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Vestibulum vestibulum tincidunt nisi nec pulvinar.
+    ## Planning
+    Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis.
 
 - title: UX & UI Design
-  context:
-    - title: Persona
-      paragraph: an archetypal user for whom the product or service is being designed.
-    
-    - title: Wireframe
-      paragraph: A storyboard is a graphic organizer in the form of illustrations in sequence for the purpose of pre-visualizing a interactive media sequence.
-
-    - title: Prototype
-      paragraph: An early release of a product built to test a concept or process.
-    
-    - title: Visual Design
-      paragraph: An early release of a product built to test a concept or process.
+  content: |
+    ## Persona
+    an archetypal user for whom the product or service is being designed.
+    ## Wireframe
+    A storyboard is a graphic organizer in the form of illustrations in sequence for the purpose of pre-visualizing a interactive media sequence.
+    ## Prototype
+    An early release of a product built to test a concept or process.
+    ## Visual Design
+    An early release of a product built to test a concept or process.
 
 - title: Development
-  context:
-    - title: Patterns
-      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
-    
-    - title: Considerations
-      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
-
-    - title: Concepts
-      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
+  content: |
+    ## Patterns
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    ## Considerations
+    Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
+    ## Concepts
+    Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
 
 - title: Feedback & Test
-  context:
-    - title: Patterns
-      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
-    
-    - title: Considerations
-      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
-
-    - title: Concepts
-      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
+  content: |
+    ## Patterns
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    ## Considerations
+    Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
+    ## Concepts
+    Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
 
 - title: Maintanance & support
-  context:
-    - title: Patterns
-      paragraph: lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
-    
-    - title: Considerations
-      paragraph: Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
-
-    - title: Concepts
-      paragraph: Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
+  content: |
+    ## Patterns
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque a libero eget posuere. Sed volutpat, magna ut eleifend vestibulum.
+    ## Considerations
+    Nullam faucibus, erat vitae aliquam dictum, ex massa volutpat diam, non aliquet justo urna id felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum libero, tempor eu lacinia placerat, euismod eu arcu. Proin lobortis vestibulum sapien, at venenatis nibh luctus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti.
+    ## Concepts
+    Morbi commodo velit vel metus gravida, rhoncus sagittis arcu eleifend. Morbi gravida tellus pellentesque dignissim commodo. Ut ut leo vel libero consectetur commodo ut quis mi. Ut consectetur leo eu eros varius mattis. Suspendisse potenti. Sed tincidunt ipsum quis risus malesuada ullamcorper. Morbi congue rutrum facilisis. Proin hendrerit orci ut arcu dapibus, ut malesuada ex sagittis. 
